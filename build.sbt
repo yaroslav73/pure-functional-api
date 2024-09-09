@@ -3,6 +3,7 @@ val PekkoVersion = "1.0.2"
 val PekkoHttpVersion = "1.0.1"
 val circeVersion = "0.14.10"
 val circeRefinedVersion = "0.15.0-M1"
+val catsVersion = "2.12.0"
 
 lazy val root = project
   .in(file("."))
@@ -25,6 +26,8 @@ lazy val root = project
       "io.circe" %% "circe-generic" % circeVersion,
       "io.circe" %% "circe-parser" % circeVersion,
       "io.circe" %% "circe-refined" % circeRefinedVersion,
+
+      "org.typelevel" %% "cats-core" % catsVersion,
 
       "org.scalameta" %% "munit" % "1.0.0" % Test
     )

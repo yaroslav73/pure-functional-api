@@ -17,6 +17,8 @@ lazy val root = project
 
       "com.typesafe.slick" %% "slick" % "3.5.1",
 
+      "eu.timepit" %% "refined" % "0.11.2",
+
       "org.scalameta" %% "munit" % "1.0.0" % Test
     )
   )

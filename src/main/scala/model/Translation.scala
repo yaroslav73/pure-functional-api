@@ -1,3 +1,5 @@
 package model
 
-final case class Translation(lang: String, name: String)
+import types.{LanguageCode, ProductName}
+
+final case class Translation(lang: LanguageCode, name: ProductName)

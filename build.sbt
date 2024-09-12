@@ -18,6 +18,11 @@ lazy val root = project
       "org.apache.pekko" %% "pekko-stream" % PekkoVersion,
       "org.apache.pekko" %% "pekko-http" % PekkoHttpVersion,
 
+      "ch.qos.logback" % "logback-classic" % "1.5.6",
+
+      "org.postgresql" % "postgresql" % "42.7.3",
+      "org.flywaydb" % "flyway-database-postgresql" % "10.17.0",
+      "org.flywaydb" % "flyway-core" % "10.17.0",
       "com.typesafe.slick" %% "slick" % "3.5.1",
 
       "eu.timepit" %% "refined" % "0.11.2",

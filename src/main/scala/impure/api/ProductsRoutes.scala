@@ -28,7 +28,7 @@ case class ProductsRoutes(repository: Repository)(using ec: ExecutionContext):
       val products: Source[Product, NotUsed] =
         src
           .collect(col => f(col))
-          .groupBy(Int.MaxValue, (p: Product) => p.id, false)
+          .groupBy(Int.MaxValue, (p: Product) => p.id)
           .fold(Option.empty[Product])((op, x) => op.fold(x.some)(p => p.copy(names = p.names ++ x.names).some))
           .mergeSubstreams
           .collect {

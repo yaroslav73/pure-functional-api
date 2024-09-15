@@ -14,8 +14,8 @@ import scala.concurrent.Future
 trait Repository:
   def loadProduct(id: ProductId): Future[Seq[(UUID, String, String)]]
   def loadProducts(): DatabasePublisher[(UUID, String, String)]
-  def saveProduct(p: Product): Future[List[Int]]
-  def updateProduct(p: Product): Future[List[Int]]
+  def saveProduct(p: Product): Future[Seq[Int]]
+  def updateProduct(p: Product): Future[Seq[Int]]
 
 object Repository:
   def make(dbConfig: DatabaseConfig[JdbcProfile]): Repository =
